@@ -1657,30 +1657,41 @@ h2[class*=__title] {
   -webkit-transform-origin: top;
   transform-origin: top;
   right: 15px;
-  bottom: -12px
-}
-.fonds__body .in-wrapper .in-rb._view {
-  -webkit-animation: view 2s linear infinite;
-  animation: view 2s linear infinite
+  bottom: -12px;
+  -webkit-animation: view 8s linear infinite;
+  animation: view 8s linear infinite
 }
 .fonds__body .in-wrapper .in-lt {
   top: -12px;
   left: 15px;
   -webkit-transform-origin: bottom;
-  transform-origin: bottom
-}
-.fonds__body .in-wrapper .in-lt._view {
-  -webkit-animation: view 2s linear infinite;
-  animation: view 2s linear infinite
+  transform-origin: bottom;
+  -webkit-animation: view 8s linear infinite;
+  animation: view 8s linear infinite
 }
 @-webkit-keyframes view {
   0% {
     opacity: 0
   }
-  32% {
+  23% {
+    opacity: 0
+  }
+  25% {
     opacity: 1
   }
-  95% {
+  48% {
+    opacity: 1
+  }
+  50% {
+    opacity: 0
+  }
+  73% {
+    opacity: 0
+  }
+  75% {
+    opacity: 1
+  }
+  98% {
     opacity: 1
   }
   100% {
@@ -1691,10 +1702,25 @@ h2[class*=__title] {
   0% {
     opacity: 0
   }
-  32% {
+  23% {
+    opacity: 0
+  }
+  25% {
     opacity: 1
   }
-  95% {
+  48% {
+    opacity: 1
+  }
+  50% {
+    opacity: 0
+  }
+  73% {
+    opacity: 0
+  }
+  75% {
+    opacity: 1
+  }
+  98% {
     opacity: 1
   }
   100% {
@@ -1721,16 +1747,9 @@ h2[class*=__title] {
   background-color: #1a232a;
   background-repeat: no-repeat;
   background-position: 0 0;
-  background: repeating-conic-gradient(from -71.5deg,#73e4ec 0 25%,transparent 25% 50%,#73e4ec 50%);
+  background: conic-gradient(from -61.5deg,#73e4ec 0 25%,transparent 25% 50%,#73e4ec 50% 75%,transparent 75% 100%);
   -webkit-animation: rotate 8s linear infinite;
   animation: rotate 8s linear infinite
-}
-.fonds__body .in::after {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  inset: 2px;
-  background: #191919
 }
 @-webkit-keyframes rotate {
   100% {
@@ -1743,6 +1762,13 @@ h2[class*=__title] {
     -webkit-transform: rotate(1turn);
     transform: rotate(1turn)
   }
+}
+.fonds__body .in::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: 2px;
+  background: #191919
 }
 .fonds__fond img {
   width: 100%;

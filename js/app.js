@@ -14717,20 +14717,6 @@ PERFORMANCE OF THIS SOFTWARE.
                     document.querySelector(".menu-open") ? document.documentElement.classList.remove("menu-open") : null;
                 }
             }
-            const inrb = document.querySelector(".in-rb");
-            const inlt = document.querySelector(".in-lt");
-            setInterval((function() {
-                inrb.classList.add("_view");
-            }), 2e3);
-            setInterval((function() {
-                inrb.classList.remove("_view");
-            }), 4e3, 2e3);
-            setInterval((function() {
-                inlt.classList.add("_view");
-            }), 2e3);
-            setInterval((function() {
-                inlt.classList.remove("_view");
-            }), 4e3, 2e3);
         }));
         menuInit();
         spollers();
