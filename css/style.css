@@ -506,9 +506,10 @@ body::after {
   bottom: 0
 }
 .button__wrapper .cut {
+  height: 1px;
   top: calc(100% - 15px);
-  right: 0;
-  width: 20px;
+  right: 1px;
+  width: 21px;
   -webkit-transform-origin: right top;
   transform-origin: right top;
   -webkit-transform: rotate(-40deg);
@@ -2117,8 +2118,8 @@ details>summary::marker {
 .sertificates__pagination {
   margin-top: 40px
 }
-.docs__spoilers {
-  margin-top: 50px
+.docs__title {
+  margin-bottom: 20px
 }
 .docs__item:not(:last-child) {
   margin-bottom: 5px
@@ -5352,21 +5353,26 @@ html.with-fancybox body.hide-scrollbar {
     border: none;
     position: relative
   }
+  [data-popup] .services__button[class] {
+    border: 1px solid #ff8819!important;
+    clip-path: polygon(0 0,100% 0,100% calc(100% - 14px),calc(100% - 17px) 100%,0 100%)
+  }
   .services__button[class].button_yellow[class] {
     border: none
   }
   .services-inner__content .services__button[class] {
     color: inherit
   }
-  .services__button[class]::before {
+  .services__button[class].button::before {
     content: attr(name);
+    position: absolute;
     border: none;
     top: 50%;
     -webkit-transform: translateY(-48%);
     transform: translateY(-48%);
     opacity: 0
   }
-  ._tab-active .services__button[class]::before {
+  ._tab-active .services__button[class].button::before {
     opacity: 1;
     -webkit-filter: blur(5px);
     filter: blur(5px);
@@ -5374,6 +5380,9 @@ html.with-fancybox body.hide-scrollbar {
   }
   .services__button[class]::after {
     display: none
+  }
+  [data-popup] .services__button[class]::after {
+    display: block
   }
   .services__button[class]:active[class] {
     background-color: initial
@@ -5537,7 +5546,7 @@ html.with-fancybox body.hide-scrollbar {
   .services__navigation .button__wrapper:not(:last-child) {
     margin-bottom: 10px
   }
-  .services__button[class]::before {
+  .button__wrapper_last .services__button[class]::before {
     -webkit-transform: translateY(-90%);
     transform: translateY(-90%)
   }
