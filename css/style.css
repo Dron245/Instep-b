@@ -560,9 +560,9 @@ body::after {
   display: block;
   position: absolute;
   border-top: 1px solid #73e4ec;
-  top: calc(100% - 15px);
+  top: calc(100% - 14px);
   right: -1px;
-  width: 28px;
+  width: 26px;
   -webkit-transform-origin: right top;
   transform-origin: right top;
   -webkit-transform: rotate(-40deg);
