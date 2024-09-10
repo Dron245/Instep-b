@@ -8340,7 +8340,6 @@
                 observeParents: true,
                 slidesPerView: 1,
                 spaceBetween: 0,
-                autoHeight: true,
                 speed: 800,
                 autoplay: {
                     delay: 3e3
