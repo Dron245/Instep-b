@@ -1298,6 +1298,10 @@ h2[class*=__title] {
   display: flex;
   gap: 30px
 }
+.work__item_first img {
+  width: 100%;
+  height: auto
+}
 .work__item:first-child {
   position: relative
 }
@@ -1473,10 +1477,14 @@ h2[class*=__title] {
   right: 0
 }
 .why__container .list {
-  max-width: 870px
+  max-width: 770px
 }
 .why__content {
   display: flex
+}
+.why__img img {
+  width: 100%;
+  height: auto
 }
 .services__top {
   display: flex;
@@ -1897,6 +1905,12 @@ h2[class*=__title] {
 .tv__after img {
   width: 100%;
   height: auto
+}
+.tv__img-wrapper {
+  width: 100%;
+  height: auto;
+  -webkit-transform: scale(.5);
+  transform: scale(.5)
 }
 .vk__top {
   display: flex;
@@ -4336,7 +4350,8 @@ html.with-fancybox body.hide-scrollbar {
     display: flex
   }
   .contacts__items {
-    display: flex
+    display: flex;
+    gap: 20px
   }
 }
 @media (min-width:47.5em) {
@@ -5346,10 +5361,6 @@ html.with-fancybox body.hide-scrollbar {
   .production .progress {
     width: initial
   }
-  .work__item_first img {
-    width: 100%;
-    height: auto
-  }
   .stroke__content {
     height: 40px
   }
@@ -5770,8 +5781,8 @@ html.with-fancybox body.hide-scrollbar {
     display: none
   }
   .tv__img-wrapper {
-    -webkit-transform: scale(.6);
-    transform: scale(.6)
+    -webkit-transform: scale(.3);
+    transform: scale(.3)
   }
   .request__container {
     flex-direction: column;
@@ -6177,6 +6188,9 @@ html.with-fancybox body.hide-scrollbar {
   .confidence__content {
     display: flex
   }
+  .confidence__top {
+    padding-right: 10px
+  }
   .confidence__bottom {
     flex: 0 0 47%;
     width: 47%
@@ -6355,8 +6369,8 @@ html.with-fancybox body.hide-scrollbar {
 }
 @media (min-width:650px)and (max-width:61.99875em) {
   .tv__img-wrapper {
-    -webkit-transform: scale(.6);
-    transform: scale(.6)
+    -webkit-transform: scale(.3);
+    transform: scale(.3)
   }
 }
 @media (max-width:76.875em)and (min-width:61.99875em) {
