@@ -879,7 +879,8 @@ h2[class*=__title] {
   top: 50%;
   left: 50%;
   translate: -50% -50%;
-  width: 109%
+  width: 109%;
+  height: 43px
 }
 .slider__arrow {
   position: absolute;
@@ -2201,7 +2202,7 @@ details>summary::marker {
   width: 100%;
   height: auto
 }
-.sertificates__pagination {
+.sertificates__pagination[class] {
   margin-top: 40px
 }
 .docs__title {
@@ -4320,11 +4321,10 @@ html.with-fancybox body.hide-scrollbar {
   .slider__img img {
     aspect-ratio: 470/397
   }
-  .slider__pagination {
-    margin-top: 20px;
-    display: flex
+  .slider__pagination[class] {
+    margin-top: 20px
   }
-  .slider__pagination .swiper-pagination-bullet {
+  .slider__pagination[class] .swiper-pagination-bullet {
     height: 5px
   }
   .work__item:first-child {
@@ -4345,9 +4345,6 @@ html.with-fancybox body.hide-scrollbar {
   }
   .reviews__pagination .swiper-pagination-bullet {
     height: 5px
-  }
-  .sertificates__pagination {
-    display: flex
   }
   .contacts__items {
     display: flex;
@@ -4551,10 +4548,10 @@ html.with-fancybox body.hide-scrollbar {
   }
 }
 @media (min-width:81.25em) {
-  .slider__pagination {
+  .slider__pagination[class] {
     display: none
   }
-  .sertificates__pagination {
+  .sertificates__pagination[class] {
     display: none
   }
 }
@@ -4587,6 +4584,9 @@ html.with-fancybox body.hide-scrollbar {
     top: -46.875rem
   }
   .work__decor {
+    width: 62.5rem
+  }
+  .capability__img {
     width: 62.5rem
   }
 }
@@ -4683,9 +4683,6 @@ html.with-fancybox body.hide-scrollbar {
 @media (min-width:90em)and (min-width:250em) {
   .capability__title {
     font-size: 10rem
-  }
-  .capability__img {
-    width: 62.5rem
   }
 }
 @media (min-width:120em) {
@@ -4905,6 +4902,14 @@ html.with-fancybox body.hide-scrollbar {
 @media (max-width:84.375em)and (max-width:48em) {
   .capability__img {
     width: 11.625rem
+  }
+}
+@media (max-width:81.25em) {
+  .slider__pagination[class] {
+    display: flex
+  }
+  .sertificates__pagination[class] {
+    display: flex
   }
 }
 @media (max-width:76.875em) {
@@ -6285,16 +6290,10 @@ html.with-fancybox body.hide-scrollbar {
   .capability__title {
     font-size: clamp(4.375rem ,1.2109375rem + 3.515625vw ,10rem)
   }
-  .capability__img {
-    width: clamp(25.3125rem ,4.39453125rem + 23.2421875vw ,62.5rem)
-  }
 }
 @media (min-width:90em)and (max-width:90em) {
   .capability__title {
     font-size: 4.375rem
-  }
-  .capability__img {
-    width: 25.3125rem
   }
 }
 @media (max-width:84.375em)and (min-width:768px) {
@@ -6315,6 +6314,16 @@ html.with-fancybox body.hide-scrollbar {
 @media (max-width:84.375em)and (min-width:768px)and (max-width:48em) {
   .capability__title {
     font-size: 2.5rem
+  }
+}
+@media (min-width:84.375em)and (min-width:90em)and (max-width:250em) {
+  .capability__img {
+    width: clamp(25.3125rem ,4.39453125rem + 23.2421875vw ,62.5rem)
+  }
+}
+@media (min-width:84.375em)and (max-width:90em) {
+  .capability__img {
+    width: 25.3125rem
   }
 }
 @media (max-width:84.375em)and (min-width:48em)and (max-width:84.375em) {
