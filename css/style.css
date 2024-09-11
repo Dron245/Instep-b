@@ -4618,11 +4618,6 @@ html.with-fancybox body.hide-scrollbar {
     height: 35.6875rem
   }
 }
-@media (min-width:62em) {
-  .fonds .button__wrapper {
-    margin-top: 2.5rem
-  }
-}
 @media (min-width:992.02px) {
   .fonds__list {
     flex: 0 0 49.145299%;
@@ -4829,9 +4824,6 @@ html.with-fancybox body.hide-scrollbar {
   }
   .fonds__title[class] {
     font-size: 1.25rem
-  }
-  .fonds .button__wrapper {
-    margin-top: 1.25rem
   }
   .spollers__title {
     font-size: 1rem
@@ -5513,7 +5505,7 @@ html.with-fancybox body.hide-scrollbar {
     display: none
   }
   .fonds__content {
-    margin-top: 15px
+    padding-top: 15px
   }
   .vk__top {
     margin-bottom: 20px
@@ -5666,8 +5658,18 @@ html.with-fancybox body.hide-scrollbar {
   .fonds__body .content {
     padding-inline: 10px
   }
+  .fonds__bottom {
+    height: 100%
+  }
+  .fonds__item {
+    height: 100%;
+    display: flex;
+    flex-direction: column
+  }
   .fonds .button__wrapper {
-    width: 100%
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: 10px
   }
   .fonds__button {
     width: 100%
@@ -6369,11 +6371,6 @@ html.with-fancybox body.hide-scrollbar {
 @media (min-width:47.99875em)and (min-width:48em)and (max-width:62em) {
   .fonds__content {
     margin-top: clamp(3.125rem ,-7.5892857143rem + 22.3214285714vw ,6.25rem)
-  }
-}
-@media (min-width:48em)and (max-width:62em) {
-  .fonds .button__wrapper {
-    margin-top: clamp(1.25rem ,-3.0357142857rem + 8.9285714286vw ,2.5rem)
   }
 }
 @media (min-width:47.9375em)and (max-width:73.125em) {
