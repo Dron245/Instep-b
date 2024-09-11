@@ -4306,7 +4306,7 @@ html.with-fancybox body.hide-scrollbar {
     border-bottom: 1px solid #f3f3f3
   }
   .bottom-footer {
-    margin-top: 50px
+    margin-block: 20px
   }
   .slider__content {
     padding-left: 50px;
@@ -4548,6 +4548,14 @@ html.with-fancybox body.hide-scrollbar {
   }
   .contacts__map {
     margin-top: 3.75rem
+  }
+}
+@media (min-width:81.25em) {
+  .slider__pagination {
+    display: none
+  }
+  .sertificates__pagination {
+    display: none
   }
 }
 @media (min-width:84.375em)and (min-width:250em) {
@@ -5646,7 +5654,7 @@ html.with-fancybox body.hide-scrollbar {
 }
 @media (max-width:40.62375em)and (max-width:22.5em) {
   .fonds__body {
-    height: 40.625rem
+    height: 41.875rem
   }
 }
 @media (max-width:40.62375em) {
@@ -5684,6 +5692,11 @@ html.with-fancybox body.hide-scrollbar {
 @media (max-width:36.875em) {
   .reviews__yandex {
     width: 400px!important
+  }
+}
+@media (max-width:31.25em) {
+  .new__title br {
+    display: block
   }
 }
 @media (max-width:30.375em) {
@@ -6341,7 +6354,7 @@ html.with-fancybox body.hide-scrollbar {
 }
 @media (max-width:40.62375em)and (min-width:22.5em)and (max-width:40.625em) {
   .fonds__body {
-    height: clamp(34.75rem ,47.9181034483rem + -32.4137931034vw ,40.625rem)
+    height: clamp(34.75rem ,50.7198275862rem + -39.3103448276vw ,41.875rem)
   }
 }
 @media (min-width:47.99875em)and (min-width:48em)and (max-width:62em) {
