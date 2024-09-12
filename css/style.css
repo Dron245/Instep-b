@@ -1,59 +1,3 @@
-@font-face {
-  font-family: ActayWide;
-  font-display: swap;
-  src: url(../fonts/ActayWide-Bold.woff2) format("woff2");
-  font-weight: 700;
-  font-style: normal
-}
-@font-face {
-  font-family: Montserrat;
-  font-display: swap;
-  src: url(../fonts/Montserrat-Black.woff2) format("woff2");
-  font-weight: 900;
-  font-style: normal
-}
-@font-face {
-  font-family: Montserrat;
-  font-display: swap;
-  src: url(../fonts/Montserrat-Medium.woff2) format("woff2");
-  font-weight: 500;
-  font-style: normal
-}
-@font-face {
-  font-family: Montserrat;
-  font-display: swap;
-  src: url(../fonts/Montserrat-Regular.woff2) format("woff2");
-  font-weight: 400;
-  font-style: normal
-}
-@font-face {
-  font-family: Inter;
-  font-display: swap;
-  src: url(../fonts/Inter-Regular.woff2) format("woff2");
-  font-weight: 400;
-  font-style: normal
-}
-@font-face {
-  font-family: norwester;
-  font-display: swap;
-  src: url(../fonts/norwester.woff2) format("woff2");
-  font-weight: 400;
-  font-style: normal
-}
-@font-face {
-  font-family: Montserrat;
-  font-display: swap;
-  src: url(../fonts/Montserrat-SemiBold.woff2) format("woff2");
-  font-weight: 600;
-  font-style: normal
-}
-@font-face {
-  font-family: Montserrat;
-  font-display: swap;
-  src: url(../fonts/Montserrat-Bold.woff2) format("woff2");
-  font-weight: 700;
-  font-style: normal
-}
 * {
   padding: 0;
   margin: 0;
@@ -4414,6 +4358,7 @@ html.with-fancybox body.hide-scrollbar {
     gap: 30px
   }
   .videos__slide_5 .videos__link {
+    margin-bottom: 0;
     margin-top: auto
   }
   .videos__mob-title {
@@ -6136,6 +6081,24 @@ html.with-fancybox body.hide-scrollbar {
   }
   .videos__img {
     height: 610px
+  }
+  .videos__slide_3 .videos__body[class] {
+    bottom: 0
+  }
+  .videos__slide_3 .videos__text {
+    margin-top: 20px
+  }
+  .videos__slide_3 .videos__link {
+    margin-bottom: 0
+  }
+  .videos__slide_4 .videos__body[class] {
+    bottom: 0
+  }
+  .videos__slide_4 .videos__text {
+    margin-top: 20px
+  }
+  .videos__slide_4 .videos__link {
+    margin-bottom: 0
   }
 }
 @media (max-width:75em)and (min-width:47.99875em) {
