@@ -5366,7 +5366,7 @@
                     allSlidesSize += slideSizeValue + (spaceBetween || 0);
                 }));
                 allSlidesSize -= spaceBetween;
-                const maxSnap = allSlidesSize > swiperSize ? allSlidesSize - swiperSize : 0;
+                const maxSnap = allSlidesSize - swiperSize;
                 snapGrid = snapGrid.map((snap => {
                     if (snap <= 0) return -offsetBefore;
                     if (snap > maxSnap) return maxSnap + offsetAfter;
@@ -5906,9 +5906,7 @@
             swiper.updateProgress(translate);
             let direction;
             if (slideIndex > activeIndex) direction = "next"; else if (slideIndex < activeIndex) direction = "prev"; else direction = "reset";
-            const isVirtual = swiper.virtual && swiper.params.virtual.enabled;
-            const isInitialVirtual = isVirtual && initial;
-            if (!isInitialVirtual && (rtl && -translate === swiper.translate || !rtl && translate === swiper.translate)) {
+            if (rtl && -translate === swiper.translate || !rtl && translate === swiper.translate) {
                 swiper.updateActiveIndex(slideIndex);
                 if (params.autoHeight) swiper.updateAutoHeight();
                 swiper.updateSlidesClasses();
@@ -5923,6 +5921,7 @@
                 const isH = swiper.isHorizontal();
                 const t = rtl ? translate : -translate;
                 if (speed === 0) {
+                    const isVirtual = swiper.virtual && swiper.params.virtual.enabled;
                     if (isVirtual) {
                         swiper.wrapperEl.style.scrollSnapType = "none";
                         swiper._immediateVirtual = true;
@@ -15130,6 +15129,7 @@ PERFORMANCE OF THIS SOFTWARE.
             }));
             document.addEventListener("click", documentActions);
             let flag = true;
+            let flags = 0;
             function documentActions(e) {
                 const targetElement = e.target;
                 if (!targetElement.closest(".menсu__icon") && !targetElement.closest(".menu__body") && flag == true) flag = false; else if (!targetElement.closest(".menсu__icon") && !targetElement.closest(".menu__body") && flag == false) {
@@ -15137,7 +15137,27 @@ PERFORMANCE OF THIS SOFTWARE.
                     document.querySelector(".menu-open") ? document.documentElement.classList.remove("lock") : null;
                     document.querySelector(".menu-open") ? document.documentElement.classList.remove("menu-open") : null;
                 }
+                if (targetElement.closest(".services__filter") && flags == 0) {
+                    flags = 1;
+                    const nav = targetElement.closest(".services__top").querySelector("nav");
+                    nav.classList.add("_menu-open");
+                } else {
+                    if (flags == 1 && targetElement.closest(".services__close-menu") && targetElement.closest(".services__top").querySelector("nav").classList.contains("_menu-open")) {
+                        flags = 0;
+                        const nav = targetElement.closest(".services__top").querySelector(".services__navigation");
+                        nav.classList.remove("_menu-open");
+                    }
+                    if (!targetElement.closest(".services__close-menu") && !targetElement.closest(".services__navigation") && document.querySelector("._menu-open") && flags == 1) {
+                        flags = 0;
+                        const nav = document.querySelector(".services__navigation");
+                        nav.classList.remove("_menu-open");
+                    }
+                }
             }
+            const mainSlider = document.querySelector(".page__slider");
+            setTimeout((() => {
+                mainSlider.style.visibility = "visible";
+            }), 200);
         }));
         menuInit();
         spollers();

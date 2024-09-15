@@ -6,7 +6,8 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240912124917">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240915181613">
+	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -626,8 +627,12 @@
 				<div class="services__container">
 					<div data-tabs class="services__tabs">
 						<div class="services__top">
-							<h2 class="services__title">Наши услуги</h2>
+							<div class="services__options">
+								<h2 class="services__title">Наши услуги</h2>
+								<button class="services__filter" type="button">Фильтр</button>
+							</div>
 							<nav data-tabs-titles class="services__navigation">
+
 								<div class="button__wrapper button__wrapper_yellow _tab-active">
 									<span class="t"></span><span class="b"></span><span class="l"></span><span class="r"></span><span class="cut"></span>
 									<button type="button" name="Протезирование нижних конечностей" class="services__button button button_yellow">
@@ -646,6 +651,9 @@
 										Детское протезирование
 									</button>
 								</div>
+								<button class="services__close-menu" type="button">
+									<img src="img/services/close.svg" alt="Image">
+								</button>
 							</nav>
 						</div>
 						<div data-tabs-body class="services__content">
@@ -960,7 +968,7 @@
 					<div class="tv__item">
 						<div class="tv__img">
 							<img class="tv__img-wrapper" src="img/tv/1.webp" alt="Image" />
-							<a data-fancybox href="video/video_1.mp4" class="videos__link">
+							<a data-fancybox href="video/spb.MP4" class="videos__link">
 								<img src="img/videos/play.svg" alt="Открыть" />
 							</a>
 							<div class="tv__after">
@@ -971,7 +979,7 @@
 					<div class="tv__item">
 						<div class="tv__img">
 							<img class="tv__img-wrapper" src="img/tv/2.webp" alt="Image" />
-							<a data-fancybox href="video/video_1.mp4" class="videos__link">
+							<a data-fancybox href="video/ntv.MP4" class="videos__link">
 								<img src="img/videos/play.svg" alt="Открыть" />
 							</a>
 							<div class="tv__after">
@@ -1711,7 +1719,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20240912124917"></script>
+	<script src="js/app.min.js?_v=20240915181613"></script>
 </body>
 
 </html>

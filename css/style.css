@@ -652,10 +652,13 @@ h2[class*=__title] {
 }
 .punkt::after {
   content: attr(name);
-  transition: .3s;
+  -webkit-filter: blur(0);
+  filter: blur(0);
+  transition: -webkit-filter .3s;
+  transition: filter .3s;
+  transition: filter .3s,-webkit-filter .3s;
   position: absolute;
-  inset: 0;
-  opacity: 0
+  inset: 0
 }
 .list-item-content__title {
   font-weight: 700;
@@ -673,7 +676,6 @@ h2[class*=__title] {
   letter-spacing: .01em
 }
 .list-item-content:hover+.punkt::after {
-  opacity: 1;
   -webkit-filter: blur(10px);
   filter: blur(10px)
 }
@@ -869,6 +871,7 @@ h2[class*=__title] {
   height: auto
 }
 .page__slider {
+  visibility: hidden;
   position: relative
 }
 .slider__container {
@@ -1331,7 +1334,7 @@ h2[class*=__title] {
   left: -5px;
   margin: 0 auto;
   background: #73e4ec;
-  rotate: -3deg
+  rotate: -2.5deg
 }
 .stroke__content::after {
   content: "";
@@ -1500,11 +1503,21 @@ h2[class*=__title] {
   letter-spacing: .01em;
   text-transform: uppercase
 }
+.services__filter {
+  color: #ff8819;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 600
+}
 .services__navigation {
   flex: 0 0 74.358974%;
   display: flex;
-  align-items: center;
-  gap: 30px
+  align-items: center
+}
+.services__close-menu {
+  position: absolute;
+  top: 0;
+  right: 20px
 }
 .services__button[class] {
   font-size: 15px;
@@ -4296,6 +4309,11 @@ html.with-fancybox body.hide-scrollbar {
     flex: 0 0 48.717949%
   }
 }
+@media (min-width:40.625em)and (min-width:73.125em) {
+  .fonds .button__wrapper {
+    margin-top: 3.125rem
+  }
+}
 @media (min-width:47.99875em) {
   .button__wrapper._tab-active .button {
     background-color: #ff8819
@@ -4329,6 +4347,12 @@ html.with-fancybox body.hide-scrollbar {
   }
   .work__item:first-child {
     flex: 0 0 40.17094%
+  }
+  .services__filter {
+    display: none
+  }
+  .services__close-menu {
+    display: none
   }
   .videos__img {
     position: absolute;
@@ -5395,40 +5419,57 @@ html.with-fancybox body.hide-scrollbar {
     line-height: 1.2
   }
   .services__top {
-    display: block
+    display: block;
+    position: relative
   }
-  .services__title {
-    margin-bottom: 15px
+  .services__options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px
+  }
+  .services__title[class] {
+    margin-bottom: 0
   }
   .services__navigation {
-    margin-bottom: 20px;
-    gap: 10px;
-    align-items: baseline;
-    overflow-x: auto;
-    overflow-y: hidden
+    gap: 20px;
+    align-items: initial;
+    flex-direction: column;
+    width: 300px;
+    position: absolute;
+    right: -100%;
+    top: 0;
+    z-index: 30;
+    transition: right .4s;
+    background-color: #191919;
+    padding: 0 20px 20px 20px
+  }
+  .services__navigation._menu-open {
+    right: 0
   }
   .services__navigation .button__wrapper {
-    flex: 0 0
+    max-width: 200px
   }
   .services__navigation .button__wrapper span {
     display: none
   }
   .services__button[class] {
-    height: 50px;
+    height: 36px;
     clip-path: none;
     padding-left: 0;
     width: 100%;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 14px;
     color: #ff8819;
     font-family: ActayWide;
-    line-height: 150%;
+    line-height: 129%;
     letter-spacing: .01em;
     text-transform: uppercase;
     border: none;
     position: relative
   }
   [data-popup] .services__button[class] {
+    height: 50px;
     border: 1px solid #ff8819!important;
     clip-path: polygon(0 0,100% 0,100% calc(100% - 14px),calc(100% - 17px) 100%,0 100%)
   }
@@ -5588,9 +5629,6 @@ html.with-fancybox body.hide-scrollbar {
   .main__text {
     font-size: 1rem
   }
-  .services__navigation .button__wrapper {
-    flex-basis: 16.25rem
-  }
   .services__body_1 .galery-services {
     height: 20.625rem
   }
@@ -5637,12 +5675,6 @@ html.with-fancybox body.hide-scrollbar {
   .slider__slide_7 .slider__img img {
     -o-object-position: 0 -110px;
     object-position: 0 -110px
-  }
-}
-@media (max-width:47.99875em)and (max-width:30.375em) {
-  .button__wrapper_last .services__button[class]::before {
-    -webkit-transform: translateY(-90%);
-    transform: translateY(-90%)
   }
 }
 @media (max-width:47.9375em) {
@@ -6018,9 +6050,6 @@ html.with-fancybox body.hide-scrollbar {
   .main__button {
     height: 3.75rem
   }
-  .services__navigation .button__wrapper {
-    flex-basis: 18.75rem
-  }
   .capability__title {
     font-size: 2.5rem
   }
@@ -6034,9 +6063,6 @@ html.with-fancybox body.hide-scrollbar {
   }
   .main__text {
     font-size: clamp(1rem ,.7794117647rem + .9803921569vw ,1.25rem)
-  }
-  .services__navigation .button__wrapper {
-    flex-basis: clamp(16.25rem ,14.0441176471rem + 9.8039215686vw ,18.75rem)
   }
   .capability__title {
     font-size: clamp(1.5625rem ,.7352941176rem + 3.6764705882vw ,2.5rem)
@@ -6390,6 +6416,16 @@ html.with-fancybox body.hide-scrollbar {
 @media (min-width:47.99875em)and (min-width:48em)and (max-width:62em) {
   .fonds__content {
     margin-top: clamp(3.125rem ,-7.5892857143rem + 22.3214285714vw ,6.25rem)
+  }
+}
+@media (min-width:40.625em)and (min-width:40.625em)and (max-width:73.125em) {
+  .fonds .button__wrapper {
+    margin-top: clamp(1.875rem ,.3125rem + 3.8461538462vw ,3.125rem)
+  }
+}
+@media (min-width:40.625em)and (max-width:40.625em) {
+  .fonds .button__wrapper {
+    margin-top: 1.875rem
   }
 }
 @media (min-width:47.9375em)and (max-width:73.125em) {
