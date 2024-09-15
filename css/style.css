@@ -2209,6 +2209,8 @@ details>summary::marker {
   position: relative
 }
 .sertificates__slider {
+  position: relative;
+  z-index: 2;
   cursor: pointer
 }
 .sertificates__slide img {
