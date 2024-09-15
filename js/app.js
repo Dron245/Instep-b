@@ -8420,11 +8420,14 @@
                     checker();
                 };
                 resizableSwiper("(max-width: 1170.02px)", ".confidence__slider", {
-                    modules: [ Pagination ],
+                    modules: [ Pagination, Autoplay ],
                     observer: true,
                     observeParents: true,
                     spaceBetween: 20,
                     speed: 800,
+                    autoplay: {
+                        delay: 3e3
+                    },
                     pagination: {
                         el: ".confidence__pagination",
                         clickable: true
@@ -8461,12 +8464,15 @@
                     checker();
                 };
                 resizableSwiper("(max-width: 991.96px)", ".videos__slider", {
-                    modules: [ Pagination ],
+                    modules: [ Pagination, Autoplay ],
                     observer: true,
                     observeParents: true,
                     slidesPerView: 1.7,
                     spaceBetween: 20,
                     speed: 800,
+                    autoplay: {
+                        delay: 3e3
+                    },
                     pagination: {
                         el: ".videos__pagination",
                         clickable: true
@@ -8501,12 +8507,15 @@
                     checker();
                 };
                 resizableSwiper("(max-width: 991.92px)", ".vk__slider", {
-                    modules: [ Pagination ],
+                    modules: [ Pagination, Autoplay ],
                     observer: true,
                     observeParents: true,
                     slidesPerView: 1.7,
                     spaceBetween: 20,
                     speed: 800,
+                    autoplay: {
+                        delay: 3e3
+                    },
                     pagination: {
                         el: ".vk__pagination",
                         clickable: true
@@ -15157,7 +15166,7 @@ PERFORMANCE OF THIS SOFTWARE.
             const mainSlider = document.querySelector(".page__slider");
             setTimeout((() => {
                 mainSlider.style.visibility = "visible";
-            }), 200);
+            }), 300);
         }));
         menuInit();
         spollers();
